@@ -1,0 +1,20 @@
+.TodoListContainer{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.TodoList{
+    width: 700px;
+    min-height: 500px;
+    background-color: white;
+}
+.addTodo{
+    display: flex;
+}
+.addTodo input{
+    width: 100%;
+}
+.addTodo button{
+    
+}
