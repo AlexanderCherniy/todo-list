@@ -90,6 +90,7 @@
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
+    border-radius: 5px;
 }
 .AddTodoButton:hover {opacity: 1}
 .addTodo{
