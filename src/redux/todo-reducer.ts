@@ -41,13 +41,20 @@ const todoReducer = (state = initialState, action: ActionType): initialStateType
             return {
                 ...state,
                 // @ts-ignore
-                Todos: state.Todos?.map((todo: any)=> todo.id === action.TodoId ? {changeMode : false, title: action.TitleText !== undefined ? action.TitleText : todo.title,text: action.DescriptionText !== undefined ? action.DescriptionText : todo.text, id: todo.id, finished: !todo.finished} : todo)
+                Todos: state.Todos?.map((todo: any)=> todo.id === action.TodoId ? {changeMode : false, title: action.TitleText !== undefined ? action.TitleText : todo.title,text: action.DescriptionText !== undefined ? action.DescriptionText : todo.text, id: todo.id, finished: !todo.finished, textClose: todo.textClose} : todo)
             }
         }
         case "todo-reducer/NOT_FINISHED_TODO": {
             return {
                 ...state,
                 TodosNotFinished: state.Todos?.filter((todo: any)=> todo.finished === false )
+            }
+        }
+        case "todo-reducer/TEXT_TODO": {         
+            return {
+                ...state,
+                // @ts-ignore
+                Todos: state.Todos?.map((todo: any)=> todo.id === action.TodoId ? {changeMode : false, title: action.TitleText !== undefined ? action.TitleText : todo.title,text: action.DescriptionText !== undefined ? action.DescriptionText : todo.text, id: todo.id, finished: todo.finished, textClose: !todo.textClose} : todo)
             }
         }
         default: {
@@ -63,7 +70,8 @@ export const actions = {
     changeTodo: (TodoId: number, TitleText?: string, DescriptionText?: string) => ({ type: "todo-reducer/CHANGE_TODO", TodoId, TitleText,DescriptionText}),
     finishedTodo: ()=> ({type: "todo-reducer/FINISHED_TODO"}),
     changeFinishedTodo: (TodoId: number)=> ({type: "todo-reducer/CHANGE_FINISHED_TODO", TodoId}),
-    NotFinishedTodo: ()=> ({type: "todo-reducer/NOT_FINISHED_TODO"})
+    NotFinishedTodo: ()=> ({type: "todo-reducer/NOT_FINISHED_TODO"}),
+    textTodo: (TodoId: number)=> ({type: "todo-reducer/TEXT_TODO", TodoId})
 }
 export const finishedTodo = (TodoId: number):ThunkType => async (dispatch) => {
     dispatch(actions.changeFinishedTodo(TodoId))

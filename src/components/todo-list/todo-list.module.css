@@ -5,12 +5,96 @@
     justify-content: center;
 }
 .TodoList{
-    width: 700px;
+    width: 650px;
     min-height: 500px;
+    padding: 0 50px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px black;
     background-color: white;
 }
+.TodoTitleInput{
+    border-radius:5px;
+    height: 20px;
+    max-width: 180px;
+    padding: 3px 5px;
+    font-size: 15px;
+    border: 1px solid rgb(173, 173, 173);
+    transition: .3s border-color;
+    margin-right: 2px;
+}
+.TodoTitleInput:hover{
+    border: 1px solid rgb(115, 115, 115);
+}
+.TodoDescriptionInput{
+    border-radius:5px;
+    height: 20px;
+    padding: 3px 5px;
+    font-size: 15px;
+    border: 1px solid rgb(173, 173, 173);
+    transition: .3s border-color;
+}
+.TodoDescriptionInput:hover{
+    border: 1px solid #aaa;
+}
+.Todo{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(241, 241, 241);
+    border-radius: 20px;
+    padding: 10px;
+}
+.TodoTextClose{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    max-width: 450px;
+    transition: .3s all;
+}
+.TodoText{
+    transition: .3s all;
+    max-width: 500px;
+}
+.TodoTitle{
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 18px;
+}
+.TodoFinished{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(241, 241, 241);
+    border-radius: 20px;
+    padding: 10px;
+
+}
+.TodoLineThrough{
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.AddTodoButton{
+    background-color: #17a5fd;
+    border: none;
+    color: white;
+    padding: 4px 10px;
+    text-align: center;
+    font-size: 18px;
+    margin-left: 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+}
+.AddTodoButton:hover {opacity: 1}
 .addTodo{
     display: flex;
+    margin-bottom: 20px;
 }
 .addTodo input{
     width: 100%;
