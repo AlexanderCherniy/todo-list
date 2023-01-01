@@ -2,7 +2,8 @@ import { AllActionType, AppState, TypeFunction } from "./store-redux"
 import { ThunkAction } from "redux-thunk"
 
 const initialState = {
-    Todos: [] as Array<any>,
+    Todos: JSON.parse(localStorage.getItem("todos") as string) !== null
+    ? JSON.parse(localStorage.getItem("todos") as string) : [] as Array<any>,
     TodosFinished: [] as Array<any>,
     TodosNotFinished: [] as Array<any>
 }
@@ -14,7 +15,7 @@ const todoReducer = (state = initialState, action: ActionType): initialStateType
             return {
                 ...state,
                 // @ts-ignore
-                Todos: [...state.Todos, action.Todo].filter((todo: any)=> todo.finished === false)
+                Todos: [...state.Todos, action.Todo]
             }
         }
         case "todo-reducer/DELETE_TODO": {

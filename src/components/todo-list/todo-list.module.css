@@ -92,6 +92,29 @@
     cursor: pointer;
     border-radius: 5px;
 }
+.Todos{
+    max-height: 360px;
+    overflow-y: auto;
+}
+.Todos::-webkit-scrollbar {
+    width: 7px;
+}
+
+.Todos::-webkit-scrollbar-thumb {
+    background-color: rgb(200, 200, 200);
+    border-radius: 20px;
+    border: 3px solid rgb(200, 200, 200);
+}
+.NoTodos{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 260px;
+    font-weight: bold;
+    font-size: 24px;
+    color: rgb(171, 171, 171);
+}
 .AddTodoButton:hover {opacity: 1}
 .addTodo{
     display: flex;
