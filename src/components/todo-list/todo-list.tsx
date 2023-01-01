@@ -77,12 +77,12 @@ const TodoList: React.FC = () =>{
                                 </div>
                             </div>
                             : 
-                            <div style={{marginLeft: 25, maxWidth: 450, width: "100%"}}>
+                            <div onBlur={()=> {changeTitle2(todo.id);changeDescription(todo.id)}} style={{marginLeft: 25, maxWidth: 450, width: "100%"}}>
                                 <div>
-                                <input style={{fontWeight: "bold", marginBottom: 2, height: 15}} className={cn.TodoTitleInput} ref={inputTitleRef2} onBlur={()=> changeTitle2(todo.id)} defaultValue={todo.title}/>
+                                <input className={cn.TodoTitleInputChange} ref={inputTitleRef2} defaultValue={todo.title}/>
                                 </div>
                                 <div>
-                                <input style={{height: 15, maxWidth: 450, width: "100%"}} className={cn.TodoDescriptionInput} ref={inputDescriptionRef} onBlur={()=> changeDescription(todo.id)}  defaultValue={todo.text}/>
+                                <input className={cn.TodoDescriptionInputChange} ref={inputDescriptionRef} defaultValue={todo.text}/>
                                 </div>
                             </div>
                             }  
