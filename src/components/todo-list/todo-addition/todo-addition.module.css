@@ -1,0 +1,56 @@
+.AddTodoButton:hover {
+    opacity: 1
+}
+
+.addTodo {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.addTodo input {
+    width: 100%;
+}
+
+.AddTodoButton {
+    background-color: #17a5fd;
+    border: none;
+    color: white;
+    padding: 4px 10px;
+    text-align: center;
+    font-size: 18px;
+    margin-left: 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.TodoTitleInput {
+    border-radius: 5px;
+    height: 20px;
+    max-width: 180px;
+    padding: 3px 5px;
+    font-size: 15px;
+    border: 1px solid rgb(173, 173, 173);
+    transition: .3s border-color;
+    margin-right: 2px;
+}
+
+.TodoTitleInput:hover {
+    border: 1px solid rgb(115, 115, 115);
+}
+
+.TodoDescriptionInput {
+    border-radius: 5px;
+    height: 20px;
+    padding: 3px 5px;
+    font-size: 15px;
+    border: 1px solid rgb(173, 173, 173);
+    transition: .3s border-color;
+}
+
+.TodoDescriptionInput:hover {
+    border: 1px solid #aaa;
+}

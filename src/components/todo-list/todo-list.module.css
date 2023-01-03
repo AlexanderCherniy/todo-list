@@ -1,10 +1,11 @@
-.TodoListContainer{
+.TodoListContainer {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.TodoList{
+
+.TodoList {
     width: 650px;
     min-height: 500px;
     padding: 0 30px;
@@ -13,141 +14,20 @@
     box-shadow: 0px 0px 15px black;
     background-color: white;
 }
-.TodoTitleInput{
-    border-radius:5px;
-    height: 20px;
-    max-width: 180px;
-    padding: 3px 5px;
-    font-size: 15px;
-    border: 1px solid rgb(173, 173, 173);
-    transition: .3s border-color;
-    margin-right: 2px;
-}
-.TodoTitleInput:hover{
-    border: 1px solid rgb(115, 115, 115);
-}
-.TodoDescriptionInput{
-    border-radius:5px;
-    height: 20px;
-    padding: 3px 5px;
-    font-size: 15px;
-    border: 1px solid rgb(173, 173, 173);
-    transition: .3s border-color;
-}
-.TodoTitleInputChange{
-    border-radius:5px;
-    height: 15px;
-    max-width: 180px;
-    padding: 3px 5px;
-    font-weight: bold;
-    font-size: 15px;
-    border: 1px solid rgb(173, 173, 173);
-    transition: .3s border-color;
-    margin-right: 2px;
-    margin-bottom: 2px;
-}
-.TodoTitleInputChange:hover{
-    border: 1px solid rgb(115, 115, 115);
-}
-.TodoDescriptionInputChange{
-    border-radius:5px;
-    height: 15px;
-    max-width: 450px;
-    width: 450px;
-    padding: 3px 5px;
-    font-size: 15px;
-    border: 1px solid rgb(173, 173, 173);
-    transition: .3s border-color;
-}
-@media (max-width: 450px){
-    .TodoTitleInputChange{
-        max-width: 100px;
-    }
-    .TodoDescriptionInputChange{
-        max-width: 120px;
-    }
-}
-.TodoDescriptionInput:hover{
-    border: 1px solid #aaa;
-}
-.Todo{
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(241, 241, 241);
-    border-radius: 20px;
-    padding: 10px;
-}
-.TodoTextClose{
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    max-width: 450px;
-    transition: .3s all;
-}
-.TodoText{
-    transition: .3s all;
-    max-width: 500px;
-}
-.TodoTitle{
-    font-weight: bold;
-    font-family: Arial;
-    font-size: 18px;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    max-width: 470px;
-}
-@media (max-width: 450px){
-    .TodoTitle{
-        max-width: 120px;
-    }
-    .TodoText{
-        max-width: 130px;
-    }
-    .TodoTextClose{
-        max-width: 130px;
-        overflow: hidden;
-    }
-}
 
-.TodoFinished{
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    background-color: rgb(241, 241, 241);
-    border-radius: 20px;
-    padding: 10px;
 
-}
-.TodoLineThrough{
+.TodoLineThrough {
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
 }
 
-.AddTodoButton{
-    background-color: #17a5fd;
-    border: none;
-    color: white;
-    padding: 4px 10px;
-    text-align: center;
-    font-size: 18px;
-    margin-left: 2px;
-    opacity: 0.6;
-    transition: 0.3s;
-    display: inline-block;
-    text-decoration: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
-.Todos{
+.Todos {
     max-height: 360px;
     overflow-y: auto;
 }
+
 .Todos::-webkit-scrollbar {
     width: 7px;
 }
@@ -156,25 +36,4 @@
     background-color: rgb(200, 200, 200);
     border-radius: 20px;
     border: 3px solid rgb(200, 200, 200);
-}
-.NoTodos{
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    height: 260px;
-    font-weight: bold;
-    font-size: 24px;
-    color: rgb(171, 171, 171);
-}
-.AddTodoButton:hover {opacity: 1}
-.addTodo{
-    display: flex;
-    margin-bottom: 20px;
-}
-.addTodo input{
-    width: 100%;
-}
-.addTodo button{
-    
 }

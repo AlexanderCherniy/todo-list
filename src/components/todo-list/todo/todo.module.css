@@ -1,0 +1,39 @@
+.TodoTitle {
+    font-weight: bold;
+    font-family: Arial;
+    font-size: 18px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    max-width: 470px;
+}
+
+.TodoTextClose {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    max-width: 450px;
+    transition: .3s all;
+}
+
+.TodoText {
+    transition: .3s all;
+    max-width: 500px;
+}
+
+@media (max-width: 450px) {
+    .TodoTitle {
+        max-width: 120px;
+    }
+
+    .TodoText {
+        max-width: 130px;
+    }
+
+    .TodoTextClose {
+        max-width: 130px;
+        overflow: hidden;
+    }
+}

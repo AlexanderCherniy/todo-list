@@ -1,0 +1,36 @@
+.TodoTitleInputChange {
+    border-radius: 5px;
+    height: 15px;
+    max-width: 180px;
+    padding: 3px 5px;
+    font-weight: bold;
+    font-size: 15px;
+    border: 1px solid rgb(173, 173, 173);
+    transition: .3s border-color;
+    margin-right: 2px;
+    margin-bottom: 2px;
+}
+.TodoTitleInputChange:hover {
+    border: 1px solid rgb(115, 115, 115);
+}
+
+.TodoDescriptionInputChange {
+    border-radius: 5px;
+    height: 15px;
+    max-width: 450px;
+    width: 450px;
+    padding: 3px 5px;
+    font-size: 15px;
+    border: 1px solid rgb(173, 173, 173);
+    transition: .3s border-color;
+}
+
+@media (max-width: 450px) {
+    .TodoTitleInputChange {
+        max-width: 100px;
+    }
+
+    .TodoDescriptionInputChange {
+        max-width: 120px;
+    }
+}
